@@ -1,28 +1,28 @@
 <template>
 <article>
                 
-                <div class="list-item">
+                <div class="list-item bounceLeft-one">
                     <span class="check__container">
                         <img src="../../../assets/images/check-circle.svg" alt="checked">
                     </span>
                     <p class="description__check">Utiliza mascarilla</p>
                 </div>
 
-                 <div class="list-item">
+                 <div class="list-item bounceLeft-two">
                     <span class="check__container">
                         <img src="../../../assets/images/check-circle.svg" alt="checked">
                     </span>
                     <p class="description__check">Lávate las manos con frecuencia</p>
                 </div>
 
-                 <div class="list-item">
+                 <div class="list-item bounceLeft-three">
                     <span class="check__container">
                         <img src="../../../assets/images/check-circle.svg" alt="checked">
                     </span>
                     <p class="description__check">Mantén una distancia con otras personas</p>
                 </div>
 
-                 <div class="list-item">
+                 <div class="list-item bounceLeft-four">
                     <span class="check__container">
                         <img src="../../../assets/images/check-circle.svg" alt="checked">
                     </span>
@@ -30,21 +30,30 @@
                 </div>
 
 
-                 <div class="list-item">
+                 <div class="list-item bounceLeft-five">
                     <span class="check__container">
                         <img src="../../../assets/images/check-circle.svg" alt="checked">
                     </span>
                     <p class="description__check">En caso de que tengas fiebre busca atención médica</p>
                 </div>
 
-                <button class="button__to__home">Explorar</button>
+                <button @click="topanel()" class="button__to__home animate">Explorar</button>
                  
             </article>
 </template>
 <script>
 
 export default {
-    
+    import  {Timer}  from "rxjs/operators";
+
+
+    methods: {
+        topanel(){
+            Timer(1000).subscribe(()=>{
+                this.$router.push("/panel")
+            });
+        }
+    }
 }
 </script>
 <style scoped>

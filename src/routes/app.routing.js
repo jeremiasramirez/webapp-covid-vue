@@ -7,6 +7,10 @@ const routes = [
         component: import('../pages/start/StartPage')
     },
     {
+        path: '/home',
+        component:   import('../pages/panel/PanelPage')
+    },
+    {
         path: '',
         redirect: '/start'
     }

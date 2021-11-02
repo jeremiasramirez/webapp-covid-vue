@@ -1,0 +1,78 @@
+.animate{
+    animation: animateidentifier .7s linear;
+    transition: 1s;
+}
+@keyframes animateidentifier {
+    from{ 
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.bounceIn{
+    animation: bounceIdentifier .6s linear;
+    transition: 1s;
+}
+@keyframes bounceIdentifier {
+    from{
+        transform: translateY(4px);
+        opacity:.4;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+
+ 
+.bounceLeft-one{
+    animation: bounceLeftdentifier .3s linear;
+    transition: 1s;
+}
+.bounceLeft-two{
+    animation: bounceLeftdentifier  .6s linear;
+    transition: 1s;
+}
+.bounceLeft-three{
+    animation: bounceLeftdentifier 1.1s linear;
+    transition: 1s;
+}
+.bounceLeft-four{
+    animation: bounceLeftdentifier 1.6s linear;
+    transition: 1s;
+}
+.bounceLeft-five{
+    animation: bounceLeftdentifier 2s linear;
+    transition: 1s;
+}
+@keyframes bounceLeftdentifier {
+    from{
+        transform: translateX(-100%);
+        opacity:0;
+    }
+    to{
+        transform:  translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* zoom in */
+
+.zoomIn{
+    animation: zoomInIdentifier .4s linear;
+    transition: 1s;
+}
+@keyframes zoomInIdentifier {
+    from{
+        transform: scale(.6);
+ 
+    }
+    to{
+        transform: scale(1);
+   
+    }
+}

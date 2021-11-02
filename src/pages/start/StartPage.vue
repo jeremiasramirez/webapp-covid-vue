@@ -1,6 +1,6 @@
 <template>
    <div class="centered">
-        <section class="container__precaution">
+        <section class="container__precaution animate">
       
             <PrecautionLogoComponent />
             <ListItemsComponent />
@@ -39,13 +39,14 @@ export default {
         
         flex-direction: column;
         align-content: center;
+        overflow:hidden;
         justify-content: center;
-        height:500px;
-        width: 500px ;
+        height:540px;
+        width: 470px ;
         padding:10px;
         padding-top:10px;
         flex-wrap:wrap; 
-        border-radius:6px;
+        border-radius:8px;
         border:1px solid #eee;
     }   
  
