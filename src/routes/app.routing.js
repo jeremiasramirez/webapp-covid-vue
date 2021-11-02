@@ -7,7 +7,7 @@ const routes = [
         component: import('../pages/start/StartPage')
     },
     {
-        path: '/home',
+        path: '/panel',
         component:   import('../pages/panel/PanelPage')
     },
     {

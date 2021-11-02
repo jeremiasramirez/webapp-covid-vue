@@ -37,21 +37,29 @@
                     <p class="description__check">En caso de que tengas fiebre busca atención médica</p>
                 </div>
 
-                <button @click="topanel()" class="button__to__home animate">Explorar</button>
-                 
+                <button  v-if="!isLoading" v-on:click="topanel" class="button__to__home animate">Explorar</button>
+               <i v-if="isLoading" class="fas fa-circle-notch circle animate"></i>
             </article>
 </template>
 <script>
-
+ 
 export default {
-    import  {Timer}  from "rxjs/operators";
-
+ 
+    data(){
+        return{
+            isLoading:false
+        }
+    },
 
     methods: {
         topanel(){
-            Timer(1000).subscribe(()=>{
+            this.isLoading=true;
+
+            setTimeout(()=>{
+                this.isLoading=false
                 this.$router.push("/panel")
-            });
+            },2000)
+           
         }
     }
 }
@@ -70,7 +78,10 @@ export default {
         color:white;
         font-size:17px;
         font-weight:500;
-        background-color: rgb(128, 61, 236);;
+        background-color: rgb(128, 61, 236); 
+    }
+    .button__to__home:hover{
+        background-color: rgb(88, 34, 175); 
     }
     .list-item{
         display:flex;

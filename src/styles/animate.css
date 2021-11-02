@@ -25,7 +25,27 @@
         opacity:1;
     }
 }
+.fa-circle-notch{
+    margin-top:20px;
+    font-size: 45px;
 
+}
+.circle{
+    animation: bounceIdentifier .5s infinite linear;
+    transition: 1s;
+    transform-origin: center;
+    color: blue;
+}
+@keyframes bounceIdentifier {
+    from{
+        transform: rotate(0);
+     
+    }
+    to{
+        transform: rotate(360deg);
+         
+    }
+}
 
  
 .bounceLeft-one{
