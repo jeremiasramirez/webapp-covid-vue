@@ -1,6 +1,7 @@
 <template>
              <article class="precaution__image">
                 <img  class="animate" src="../../../assets/images/precaution.svg" alt="precaution">
+                
             </article>
  
 </template>

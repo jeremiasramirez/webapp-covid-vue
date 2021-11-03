@@ -31,7 +31,7 @@
 
 }
 .circle{
-    animation: bounceIdentifier .5s infinite linear;
+    animation: bounceIdentifier 1s infinite linear;
     transition: 1s;
     transform-origin: center;
     color: blue;

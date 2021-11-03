@@ -1,11 +1,14 @@
 <template>
    <div class="centered">
+        <h1 class="title__precautions animate">Precauciones</h1>
         <section class="container__precaution animate">
       
             <PrecautionLogoComponent />
+          
             <ListItemsComponent />
 
     </section>
+     
    </div>
 </template>
 
@@ -24,7 +27,12 @@ export default {
 
     
 
-
+    .title__precautions{
+        font-size:20px;
+        margin-top:-30px;
+        margin-bottom:20px;
+        color: rgb(167, 157, 157);
+    }
 
 
     .centered{
