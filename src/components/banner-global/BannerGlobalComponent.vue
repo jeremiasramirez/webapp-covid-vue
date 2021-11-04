@@ -12,11 +12,8 @@
             </div>
 
     <!-- fake card -->
-            <div class="card__global__fake" v-for="(x, index) in [1,2]" :key="index">
-                <h1 class="title__card__fake"></h1>
 
-                <p class="title__number__fake"></p>
-            </div>
+        <FakeCardComponent v-if="isLoading" />
 
 
 
@@ -25,10 +22,20 @@
    </section>
 </template>
 <script>
+import FakeCardComponent from "../../components/fake-card/FakeCardComponent";
 
 import "./BannerGlobalComponent.css";
 
 export default{
+    data(){
+        return {
+            isLoading: false
+        }
+    },
+    components: {
+        FakeCardComponent
+    }
+
 
 }
 </script>

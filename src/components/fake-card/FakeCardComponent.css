@@ -1,0 +1,28 @@
+
+
+/* fake */
+
+
+.card__global__fake{
+    width: 230px;
+    height:110px;
+    margin: 0 4px;
+    border-radius: 7px;
+    background-color:rgba(230, 200, 200, 0.281);
+}
+
+.title__card__fake{
+    margin-top:50px;
+    color: white;
+     width: 230px;
+     border-radius: 20px;
+    height:10px;
+    background-color: rgba(247, 247, 247, 0.849);
+}
+.title__number__fake{
+    width: 230px;
+    height:10px;
+    border-radius: 20px;
+    background-color: rgba(252, 252, 252, 0.849);
+    
+}
