@@ -31,6 +31,11 @@ export default {
         font-size:20px;
         margin-top:-30px;
         margin-bottom:20px;
+        background-color: rgba(243, 231, 231, 0.63);
+        font-weight:400;
+        font-family: "ubuntu";
+        padding: 3px 0;
+        border-radius:6px;
         color: rgb(167, 157, 157);
     }
 
