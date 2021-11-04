@@ -3,7 +3,7 @@
        <h1 class="title__global">A nivel global</h1>
 
 
-       <article class="container__global__cards">
+    <article class="container__global__cards">
 
             <div class="card__global red__card">
                 <h1 class="title__card">Nuevas muertes</h1>
@@ -11,13 +11,13 @@
                 <p class="title__number">+20,340</p>
             </div>
 
-    <!-- fake card -->
 
+        <!-- fake card - when the data has not arrived-->
         <FakeCardComponent v-if="isLoading" />
 
 
 
-       </article>
+    </article>
 
    </section>
 </template>

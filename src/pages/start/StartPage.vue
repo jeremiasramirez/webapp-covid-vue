@@ -1,6 +1,7 @@
 <template>
    <div class="centered" v-if="isMounted">
         <h1 class="title__precautions animate">Precauciones</h1>
+        
         <section class="container__precaution animate">
       
             <PrecautionLogoComponent />
