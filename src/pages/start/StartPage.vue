@@ -1,5 +1,5 @@
 <template>
-   <div class="centered">
+   <div class="centered" v-if="isMounted">
         <h1 class="title__precautions animate">Precauciones</h1>
         <section class="container__precaution animate">
       
@@ -15,56 +15,23 @@
 <script>
 import ListItemsComponent from "../../components/start/list-items/ListItemsComponents"
 import PrecautionLogoComponent from "../../components/start/precaution-logo/PrecautionLogoComponent"
+import "./StartPage.css"
 export default {
+    data(){
+        return {
+            isMounted: false
+        }
+    },
     components: {
         ListItemsComponent,
         PrecautionLogoComponent
+    },
+    mounted(){
+        this.isMounted=true;
+    },
+    beforeUnmount(){
+        this.isMounted=false;
     }
 }
 </script>
-<style scoped>
-
-
-    
-
-    .title__precautions{
-        font-size:20px;
-        margin-top:-30px;
-        margin-bottom:20px;
-        background-color: rgba(243, 231, 231, 0.63);
-        font-weight:400;
-        font-family: "ubuntu";
-        padding: 3px 0;
-        border-radius:6px;
-        color: rgb(167, 157, 157);
-    }
-
-
-    .centered{
-        display: flex;
-        flex-wrap:wrap; 
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-    }
-    .container__precaution{
-        display: flex;
-        
-        flex-direction: column;
-        align-content: center;
-        overflow:hidden;
-        justify-content: center;
-        height:540px;
-        width: 470px ;
-        padding:10px;
-        padding-top:10px;
-        flex-wrap:wrap; 
-        border-radius:8px;
-        border:1px solid #eee;
-    }   
- 
-
-
-
- 
-</style> 
+<style scoped> </style> 
