@@ -12,10 +12,14 @@
 }
 
 .bounceIn{
-    animation: bounceIdentifier .6s linear;
+    animation: bounceIndentifier .7s linear;
     transition: 1s;
 }
-@keyframes bounceIdentifier {
+.bounceInTwo{
+    animation: bounceIndentifier 1s linear;
+    transition: 1s;
+}
+@keyframes bounceIndentifier {
     from{
         transform: translateY(4px);
         opacity:.4;
