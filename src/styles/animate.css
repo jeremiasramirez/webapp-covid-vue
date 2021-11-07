@@ -38,7 +38,7 @@
     animation: bounceIdentifier 1s infinite linear;
     transition: 1s;
     transform-origin: center;
-    color: blue;
+    color: rgb(123, 123, 241);
 }
 @keyframes bounceIdentifier {
     from{

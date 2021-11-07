@@ -1,5 +1,6 @@
 <template>
    <section class="contain__global">
+       
        <h1 class="title__global animate" v-if="!isLoading">A nivel global</h1>
 
     <div class="lastUpdate animate" v-if="existUpdate">Ultima actualización {{ lastUpdateData }}</div>
@@ -44,10 +45,10 @@
         <!-- fake card - when the data has not arrived-->
         <FakeCardComponent v-if="isLoading" />
 
-
+  
 
     </article>
-
+ 
    </section>
 </template>
 <script>
