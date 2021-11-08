@@ -1,7 +1,7 @@
 <template>
    <section class="contain__global">
        
-       <h1 class="title__global animate" v-if="!isLoading">A nivel global</h1>
+       <h1 class="title__global animate" >A nivel global</h1>
 
     <div class="lastUpdate animate" v-if="existUpdate">Ultima actualización {{ lastUpdateData }}</div>
     <article class="container__global__cards ">
@@ -21,9 +21,9 @@
         
    
 
-            <div class="card__global bounceIn green__card" v-if="!isLoading && newRecovered">
+            <div class="card__global bounceIn green__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Nuevos recuperados</h1>
-                <p class="title__number bounceInTwo">+{{  (newRecovered) }}</p>
+                <p class="title__number bounceInTwo">+{{  newRecovered }}</p>
             </div>
 
 
@@ -31,13 +31,9 @@
                 <h1 class="title__card bounceIn">Muertes en total</h1>
                 <p class="title__number bounceInTwo">{{ (totalDeaths) }}</p>
             </div>    
+ 
 
-            <div class="card__global bounceIn red__card" v-if="!isLoading">
-                <h1 class="title__card bounceIn">Total en total</h1>
-                <p class="title__number bounceInTwo">{{ (totalDeaths) }}</p>
-            </div>  
-
-            <div class="card__global bounceIn blue__card" v-if="!isLoading && totalConfirmed">
+            <div class="card__global bounceIn blue__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Total Confirmados</h1>
                 <p class="title__number bounceInTwo">{{ (totalConfirmed) }}</p>
             </div>         
@@ -52,7 +48,7 @@
    </section>
 </template>
 <script>
-
+import dotTransform from "dot-transform"
 import FakeCardComponent from "../../components/fake-card/FakeCardComponent";
 import { ajax } from "rxjs/ajax"
 import { pluck, delay } from 'rxjs/operators'
@@ -102,11 +98,11 @@ export default{
               
                 this.activeLastUpdateNotification()
                 this.isLoading=false
-                this.newDeaths = data.NewDeaths;
-                this.newConfirmed = data.NewConfirmed;
-                this.newRecovered=data.NewRecovered;
-                this.totalDeaths = data.TotalDeaths
-                this.totalConfirmed = data.TotalConfirmed
+                this.newDeaths = dotTransform(data.NewDeaths);
+                this.newConfirmed = dotTransform(data.NewConfirmed);
+                this.newRecovered=dotTransform(data.NewRecovered);
+                this.totalDeaths = dotTransform(data.TotalDeaths)
+                this.totalConfirmed = dotTransform(data.TotalConfirmed)
                 this.lastUpdateData=new Date(data.Date).toDateString()
             })
 

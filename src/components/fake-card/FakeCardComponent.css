@@ -4,11 +4,11 @@
 
 
 .card__global__fake{
-    width: 230px;
+    width: 200px;
     height:110px;
     margin: 0 4px;
     border-radius: 7px;
-    background-color:rgba(230, 200, 200, 0.281);
+    background-color:rgba(230, 200, 200, 0.425);
 }
 
 .title__card__fake{
@@ -18,13 +18,13 @@
      border-radius: 20px;
     height:10px;
     margin-left: 60px;
-    background-color: rgba(238, 226, 226, 0.849);
+    background-color: rgba(230, 216, 216, 0.932);
 }
 .title__number__fake{
     width: 60px;
     height:10px;
     border-radius: 20px;
     margin-left:80px;
-    background-color: rgba(238, 226, 226, 0.849);
+    background-color: rgba(224, 212, 212, 0.849);
     
 }
