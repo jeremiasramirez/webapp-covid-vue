@@ -5,6 +5,11 @@
     padding:20px;
     
 }
+ 
+.fa-sync,.await{
+    color: rgb(255, 191, 191);
+    font-size: 13px;
+}
 .title__global{
     background-color:rgba(231, 230, 233, 0.637);
     padding:10px 0;
@@ -27,8 +32,9 @@
 .card__global{
     width: 200px;
     height:110px;
-    margin: 0 7px;
-    border-radius: 7px;
+    margin: 0 5px;
+    border-radius: 6px;
+    background: rgba(28, 31, 196, 0.61)
   
 }
 .card__global:hover{
@@ -46,7 +52,7 @@
     font-weight: 600;
 }
 
-.red__card{
+/* .red__card{
     background-image:linear-gradient(to right,rgb(219, 63, 63),rgb(201, 25, 25));
 }
 
@@ -66,6 +72,9 @@
 }
 
 
+.magenta__card{
+    background-image:linear-gradient(to bottom,rgb(167, 3, 189),rgb(209, 102, 173));
+} */
 
 
 .lastUpdate{
