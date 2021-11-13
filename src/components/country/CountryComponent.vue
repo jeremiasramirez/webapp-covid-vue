@@ -6,7 +6,7 @@
                         <img src="https://images.visitarepublicadominicana.org/bandera-de-republica-dominicana.jpg" alt="flag">
                     </div>
                     <p>Republica dominicana</p>
-                    <div>{{country}}</div>
+                    <div class="arrow__left"> > </div>
                 </div>
         </article>
 </template>

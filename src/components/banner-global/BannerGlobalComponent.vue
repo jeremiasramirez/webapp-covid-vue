@@ -1,7 +1,9 @@
 <template>
    <section class="contain__global">
        
-       <h1 class="title__global animate" >A nivel global</h1>
+      <div class="title">
+           <h1 class="title__global animate" >A nivel global</h1>
+      </div>
 
     <div class="lastUpdate animate" v-if="existUpdate">Ultima actualización {{ lastUpdateData }}</div>
     <article class="container__global__cards ">

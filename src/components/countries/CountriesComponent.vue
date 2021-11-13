@@ -49,7 +49,7 @@
 
 
         <!-- separation of countries and visualization -->
-        <section>
+        <section class="separation">
             >>>
         </section>
 

@@ -8,12 +8,12 @@
     height:110px;
     margin: 4px 4px;
     border-radius: 7px;
-    background-color:rgba(230, 200, 200, 0.425);
+    background-color:whitesmoke;
     animation: offon 1s infinite linear alternate-reverse;
 }
 @keyframes offon {
     from{
-        opacity:.5;
+        opacity:.4;
     }
     to{
         opacity:1;
