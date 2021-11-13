@@ -45,9 +45,19 @@
 
 
 
+
+
+
+        <!-- separation of countries and visualization -->
         <section>
             >>>
         </section>
+
+
+
+
+
+
 
 
         <!-- visualization -->
@@ -55,13 +65,14 @@
 
             <p>visualization</p>
 
-
-
-
-
-
-
+ 
         </section>
+
+
+
+
+
+
     </div>
 
 
@@ -74,25 +85,31 @@
 </template>
 
 <script>
+
+//imports
 import "./CountriesComponent.css"
-import CountryComponent from "../country/CountryComponent.vue"
+import CountryComponent from "../country/CountryComponent.vue";
+
+
+
+
+
+
+
+
 export default {
+    
+
     
     components: {
         CountryComponent
     },
     
-    methods: {
 
-        next(){
-            console.log("next")
-        },
-        back(){
-              console.log("bacb")
-        }
-        
-    }
 
+
+
+ 
 
 
 
