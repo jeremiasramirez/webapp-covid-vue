@@ -8,27 +8,27 @@
         
      
 
-            <div class="card__global red__card bounceIn" v-if="!isLoading">
+            <div class="card__global red__card animate" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Nuevas muertes</h1>
                 <p class="title__number bounceInTwo"><span class="fas fa-users"></span> +{{  (newDeaths) }}</p>
             </div>
 
 
-            <div class="card__global bounceIn orange__card" v-if="!isLoading">
+            <div class="card__global animate orange__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Nuevos confirmados</h1>
                 <p class="title__number bounceInTwo"><span class="fas fa-users"></span> +{{  (newConfirmed) }}</p>
             </div>
         
    
 
-            <div class="card__global bounceIn green__card" v-if="!isLoading">
-                <h1 class="title__card bounceIn">Nuevos recuperados</h1>
+            <div class="card__global  animate green__card" v-if="!isLoading">
+                <h1 class="title__card animate">Nuevos recuperados</h1>
                 <p class="title__number bounceInTwo" v-if="newRecovered>0"><span class="fas fa-users"></span> +{{  newRecovered }}</p>
                 <pre class="await" v-if="newRecovered==0">En espera</pre>
                  <span v-if="newRecovered==0" class="fas fa-sync"></span>
             </div>
 
-            <div class="card__global bounceIn magenta__card" v-if="!isLoading">
+            <div class="card__global animate magenta__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Total recuperados</h1>
                 <p class="title__number bounceInTwo" v-if="totalRecovered>0"><span class="fas fa-users"></span> +{{  totalRecovered }}</p> 
                 <pre class="await" v-if="totalRecovered==0">En espera</pre>
@@ -36,14 +36,14 @@
                 
             </div>
 
-            <div class="card__global bounceIn red__card" v-if="!isLoading">
+            <div class="card__global animate red__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Muertes en total</h1>
                 <p class="title__number bounceInTwo"><span class="fas fa-users"></span> +{{ (totalDeaths) }}</p>
                 
             </div>    
  
 
-            <div class="card__global bounceIn blue__card" v-if="!isLoading">
+            <div class="card__global animate blue__card" v-if="!isLoading">
                 <h1 class="title__card bounceIn">Total Confirmados</h1>
                 <p class="title__number bounceInTwo"><span class="fas fa-users"></span> +{{ (totalConfirmed) }}</p>
             </div>         
@@ -108,7 +108,7 @@ export default{
             pluck('response','Global')).subscribe((data)=>{
               
                 this.activeLastUpdateNotification()
-                console.log(data)
+            
                 this.isLoading=false
                 this.newDeaths = dotTransform(data.NewDeaths);
                 this.newConfirmed = dotTransform(data.NewConfirmed);

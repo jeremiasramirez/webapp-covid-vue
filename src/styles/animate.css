@@ -1,5 +1,5 @@
 .animate{
-    animation: animateidentifier .7s linear;
+    animation: animateidentifier .5s linear;
     transition: 1s;
 }
 @keyframes animateidentifier {

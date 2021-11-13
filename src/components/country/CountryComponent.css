@@ -1,0 +1,32 @@
+.countrie{
+    height:300px;
+    width:400px;
+    margin-top:8px;
+  
+}
+
+.country{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4px 23px;
+    border-bottom: .4px solid #eee;
+    color:rgb(58, 55, 55);
+    margin: 0px 0;
+    margin-left:16px;
+    border-radius: 7px;
+}
+.country:hover{
+    background-color: rgb(231, 225, 230);
+    cursor: pointer;
+    transition:.4s;
+}
+
+.flag {
+    margin-left:-14px;
+    width:50px;
+}
+.flag img{
+    width:inherit;
+}
+

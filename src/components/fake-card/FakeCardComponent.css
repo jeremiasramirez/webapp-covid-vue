@@ -6,7 +6,7 @@
 .card__global__fake{
     width: 200px;
     height:110px;
-    margin: 0 4px;
+    margin: 4px 4px;
     border-radius: 7px;
     background-color:rgba(230, 200, 200, 0.425);
 }
