@@ -15,7 +15,10 @@
     padding: 10px 20px;
     margin: 5px 0;
   
- animation: animatefakecountry 1s infinite linear alternate-reverse;
+ 
+ }
+ .animate__fake{
+    animation: animatefakecountry 1s infinite linear alternate-reverse;
  }
  @keyframes animatefakecountry {
      from{
@@ -38,13 +41,33 @@
  }
  
  .flag__text{
-     width: 120px;
+     width: 150px;
      height: 15px;
      border-radius: 6px;
  }
  
  .flag__arrow{
      width: 30px;
-     height: 30px;
+     height: 18px;
      border-radius: 10%;
+ }
+
+
+ .search__fake{
+     width: 380px;
+     height:40px;
+     border-radius:8px;
+     margin-bottom:15px;
+     margin-left: 23px;
+     background:rgb(235, 229, 229);
+ }
+
+ .pagination__fake{
+    width: 150px;
+    height:30px;
+    border-radius:8px;
+    margin-top:15px;
+    margin-left: 135px;
+    background:#ddd;
+     
  }

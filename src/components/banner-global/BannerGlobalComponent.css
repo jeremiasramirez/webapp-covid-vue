@@ -16,7 +16,7 @@
     justify-content: center;
 }
 .title__global{
-    background-image:linear-gradient(to left, rgb(162, 117, 192),rgb(219, 163, 110));
+    background-image:linear-gradient(to left, rgb(162, 117, 192),rgb(134, 110, 219));
     padding:10px 0;
     border-radius:7px;
     width: 95%;
@@ -43,7 +43,7 @@
     height:110px;
     margin: 4px 5px;
     border-radius: 6px;
-    background-color: rgb(108, 109, 145);
+    background-color: rgb(139, 95, 175);
    
   
 }
