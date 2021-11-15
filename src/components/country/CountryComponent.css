@@ -24,7 +24,7 @@
 
 .flag {
     margin-left:-12px;
-    width:50px;
+    width:28px;
 }
 .flag img{
     width:inherit;
@@ -36,3 +36,21 @@
     font-size: 20px;
     margin-right: -10px;
 }
+
+
+
+.activePagination{
+    background-color:rgb(223, 209, 209);
+    border-radius: 6px;
+    width:200px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.activePagination:hover {
+    opacity:.8;
+    box-shadow:0px 0px 1px grey;
+}
+
+
+

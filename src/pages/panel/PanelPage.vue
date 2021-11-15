@@ -4,9 +4,9 @@
     </div>
 
     <div>
-        <CountriesComponent />
+        <CountriesComponent :allCountries="allCases"/>
     </div>
-</template>
+</template> 
 
 <script>
 import BannerGlobalComponent from "../../components/banner-global/BannerGlobalComponent.vue";
@@ -43,7 +43,20 @@ export default {
 
         getCovidCases(){
             this.covidCases().subscribe((cases)=>{
-                this.allCases=cases;
+                this.allCases=cases; 
+              
+            })
+        },
+
+
+
+        getImage(img){
+             ajax.get(`https://restcountries.eu/rest/v2/alpha/${img}`).pipe(pluck("response","flag")).subscribe((e)=>{
+                  for(let i=0; i<this.allCases.length; i++){
+                        this.allCases[i].image=e;    
+                }
+               
+                  
             })
         },
 
@@ -55,7 +68,7 @@ export default {
 
         covidCases(){
             return  ajax.get('https://api.covid19api.com/summary').pipe(
-                delay(10), pluck('response','Countries')
+                delay(1000), pluck('response','Countries')
             )
         } 
 

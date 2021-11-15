@@ -1,0 +1,50 @@
+
+/* fake countries */
+
+.fake__countries{
+    padding: 0 0 0 15px;
+ }
+ .container__fakes__countries{
+    background: rgba(221, 218, 218, 0.603);
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    height:27px;
+    width:360px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 5px 0;
+  
+ animation: animatefakecountry 1s infinite linear alternate-reverse;
+ }
+ @keyframes animatefakecountry {
+     from{
+         opacity:.4;
+     }
+     to{
+         opacity:1;
+     }
+ }
+ 
+ .flag__fake,.flag__text,.flag__arrow{
+   
+     background-color: rgb(218, 205, 205);
+ }
+ 
+ .flag__fake{
+     width: 28px;
+     height: 28px;
+     border-radius: 50%;
+ }
+ 
+ .flag__text{
+     width: 120px;
+     height: 15px;
+     border-radius: 6px;
+ }
+ 
+ .flag__arrow{
+     width: 30px;
+     height: 30px;
+     border-radius: 10%;
+ }
