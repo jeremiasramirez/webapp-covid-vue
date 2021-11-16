@@ -1,6 +1,9 @@
 <template>
-           <!----------- search ------------>
-            <article class="container__search" v-if="data.length">
+
+    <section class="flex-countries">
+                   <!----------- search ------------>
+            <article>
+                 <article class="container__search" v-if="data.length">
                 <input   v-model="datasearch" type="search" class="search" placeholder="search"> 
             </article>
 
@@ -42,7 +45,9 @@
 
 
         <article class="counter animate" v-if="isPaginationActive && data.length" >
-           
+            <div class="skip__buttons" v-on:click="skip_back">
+                <img src="../../assets/images/skip_previous.svg" alt="flag">
+            </div>
             <button class="back" v-on:click="back"> 
                 <img src="../../assets/images/arrow_left.svg" alt="flag">
                  </button>
@@ -52,13 +57,34 @@
                 </div>
                 
             <button class="next" v-on:click="next"> 
-                 <img src="../../assets/images/arrow_right.svg" alt="flag">
-                 </button>
+                <img src="../../assets/images/arrow_right.svg" alt="flag">
+            </button>
+
+            <div class="skip__buttons" v-on:click="skip_next">
+                <img src="../../assets/images/skip_next.svg" alt="flag">
+            </div>
+
         </article>
 
-     
+        </article>
+
+
+            
+    </section>
+
+       <!-- separation of countries and visualization -->
+        <section class="separation zoomIn">
+              <img src="../../assets/images/arrow_right.svg" alt="flag"> 
+        </section>
  
-     
+      <section class="visualization">
+
+            <article  class="message bounceIn">
+                <p>Elige un país para ver su información completa! </p>
+            </article>
+ 
+            <p v-if="variableGlobal">es global</p>
+        </section>
 </template>
 
 
@@ -100,6 +126,17 @@ export default {
 
  
     methods: {
+        skip_next(){
+            this.startPage = this.lengthPage
+            this.start=this.lengthPage/6
+        },
+
+
+       skip_back(){
+            this.startPage = 1
+            this.start= 0
+        },
+
 
         activePagination(){
             this.lengthPage=Math.round(this.data.length / 6)
