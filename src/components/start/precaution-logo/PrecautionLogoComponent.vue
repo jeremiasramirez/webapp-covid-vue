@@ -1,8 +1,5 @@
 <template>
-             <article class="precaution__image">
-
-               <!-- {{defaultUrl.name}} -->
-                 
+             <article class="precaution__image">       
                 <img v-if="saveActive.id==1" class="animate"  src="../../../assets/images/precaution.svg" alt="precaution">
                 <img v-if="saveActive.id==2" class="animate"  src="../../../assets/images/distance.svg" alt="distance">
                 <img v-if="saveActive.id==3" class="animate"  src="../../../assets/images/wash_hand.svg" alt="wash hand">
@@ -26,21 +23,20 @@
 <script>
 export default {
     data(){
-
         return {  
             saveActive:{
                 id:1
             } 
-        }
-
-
-    },
-  
-    mounted(){
-     
+        } 
     } 
 }
 </script>
+
+
+
+
+
+
 <style scope>
        .precaution__image{
         width:210px; 
@@ -85,14 +81,6 @@ export default {
     .one{
         background-color:rgb(98, 0, 255);
      }
-    .two{
-        background-color:rgb(98, 0, 255);
-     }
-     .three{
-        background-color:rgb(98, 0, 255);
-     }
-     .none{
-         background:white;
-     }
+    
       
 </style>
