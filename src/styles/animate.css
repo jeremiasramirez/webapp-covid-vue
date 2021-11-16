@@ -56,6 +56,10 @@
     animation: bounceLeftdentifier .3s linear;
     transition: 1s;
 }
+.bounceRight-one{
+    animation: bounceRightdentifier .3s linear;
+    transition: 1s;
+}
 .bounceLeft-two{
     animation: bounceLeftdentifier  .6s linear;
     transition: 1s;
@@ -71,6 +75,18 @@
 .bounceLeft-five{
     animation: bounceLeftdentifier 2s linear;
     transition: 1s;
+}
+
+
+@keyframes bounceRightdentifier {
+    from{
+        transform: translateX(0%);
+        opacity:0;
+    }
+    to{
+        transform:  translateX(-100%);
+        opacity:1;
+    }
 }
 @keyframes bounceLeftdentifier {
     from{

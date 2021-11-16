@@ -10,13 +10,13 @@
         <section class="countries">
    
 
-            <CountryComponent :data="allCountries"/>
+            <CountryComponent :data="allCountries" />
  
         </section>
 
 
 
-
+ 
 
 
         <!-- separation of countries and visualization -->
@@ -25,11 +25,7 @@
         </section>
 
 
-
-
-
-
-
+ 
 
         <!-- visualization -->
         <section class="visualization">
@@ -37,10 +33,10 @@
             <article  class="message bounceIn">
                 <p>Elige un país para ver su información completa! </p>
             </article>
-
  
+            <p v-if="variableGlobal">es global</p>
         </section>
-
+ 
 
 
 
@@ -66,12 +62,10 @@ import CountryComponent from "../country/CountryComponent.vue";
 
 
 
-
-
-
-
 export default {
-    
+    data(){
+        return { }
+    },
     props: [
         'allCountries'
     ],
@@ -79,8 +73,8 @@ export default {
     components: {
         CountryComponent
     },
-    mounted(){
-     
+    method:{
+        
         
     }
     

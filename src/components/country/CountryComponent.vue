@@ -10,7 +10,7 @@
 
          <article class="countrie"  v-if="data.length">
                 
-            <div class="country animate" v-for="(country,index) in search().slice(start,end)" v-bind:key="index">
+            <div class="country animate" v-for="(country,index) in search().slice(start,end)" v-bind:key="index" v-on:click="getInfoFromCountry(country,index)">
                     <div class="flag">
                       
                         <img src="../../assets/images/flag.svg" alt="flag">
@@ -56,7 +56,9 @@
                  </button>
         </article>
 
-   
+     
+ 
+     
 </template>
 
 
@@ -67,9 +69,13 @@ import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
 export default {
 
     props: ['data'],
+    
     components: {
         FakeCountryComponent
     },
+
+
+
 
     data(){
         return {
@@ -100,18 +106,24 @@ export default {
             if(this.isPaginationActive == false) this.isPaginationActive= true
             else this.isPaginationActive=false 
         },
+
+ 
         search(){
-           
-        
+
             return this.data.filter(item => {
                const results=item.Slug.toLowerCase().includes(this.datasearch.toLowerCase()) 
                return results
             });
-            
-           
-                
-   
+  
+  
          },
+
+ 
+
+        getInfoFromCountry(data,index){
+            console.log(data)
+            console.log(index)
+        },
 
 
 
@@ -142,5 +154,8 @@ export default {
            
         }
     }
+
+
+
 }
 </script> 
