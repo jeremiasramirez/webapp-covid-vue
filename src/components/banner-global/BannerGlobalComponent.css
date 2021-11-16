@@ -100,7 +100,7 @@
     left: 10px;
     text-align: center;
     animation: animateLastUpdate 7s 4s linear;
-    background-image: linear-gradient(to left,rgb(93, 33, 121),rgb(115, 35, 180));
+    background-image: linear-gradient(to left,rgb(33, 121, 84),rgb(35, 180, 78));
 }
 @keyframes animateLastUpdate{
    0%{

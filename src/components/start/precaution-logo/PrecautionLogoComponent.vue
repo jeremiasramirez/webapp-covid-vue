@@ -1,50 +1,98 @@
 <template>
              <article class="precaution__image">
 
-                 <!-- back image -->
-                 <button class="back__image"> back</button>
+               <!-- {{defaultUrl.name}} -->
                  
-                <img  class="animate" src="../../../assets/images/precaution.svg" alt="precaution">
-                
-                <!-- next image -->
-                <button class="next__image">next</button>
+                <img v-if="saveActive.id==1" class="animate"  src="../../../assets/images/precaution.svg" alt="precaution">
+                <img v-if="saveActive.id==2" class="animate"  src="../../../assets/images/distance.svg" alt="distance">
+                <img v-if="saveActive.id==3" class="animate"  src="../../../assets/images/wash_hand.svg" alt="wash hand">
+               
             </article>
- 
+      
+            <article class="pagination__logo">
+                <div  v-if="saveActive.id == 1"  class="one" v-on:click="saveActive.id = 1"></div>
+                <div  v-if="saveActive.id != 1"  v-on:click="saveActive.id=1"></div>
+
+                <div class="one" v-if="saveActive.id == 2"  v-on:click="saveActive.id = 2"></div>
+                <div v-if="saveActive.id != 2"  v-on:click="saveActive.id=2"></div>
+            
+                <div class="one" v-if="saveActive.id == 3 "  v-on:click="saveActive.id = 3"></div>
+                <div v-if="saveActive.id != 3"  v-on:click="saveActive.id = 3"></div>
+            </article>
+             
+             
 </template>
 
+<script>
+export default {
+    data(){
 
+        return {  
+            saveActive:{
+                id:1
+            } 
+        }
+
+
+    },
+  
+    mounted(){
+     
+    } 
+}
+</script>
 <style scope>
        .precaution__image{
-        width:220px; 
+        width:210px; 
+        height:135px;
         display: flex;
         justify-content: space-between;
-        margin-left:11%;
+        margin-left:20%;
         align-items: center;
         margin-bottom:40px;
     }
 
 
-    .back__image{
-        height: 40px;
-        width:70px;
-        position: relative;
-        left:-50px;
-        background-color: #eee;
-        color:#888;
-        border-radius:50%;
-        border:none;
-    }
-    .next__image{
-        position: relative;
-        left:50px;
-        height: 40px;
-        width:70px;
-        background-color: #eee;
-        color:#888;
-         border:none;
-        border-radius:50%;
-    }
+   
+  
     .precaution__image img {
         width:inherit;
+        height:inherit;
     }
+
+    .pagination__logo {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .pagination__logo div {
+         width:13px;
+         height:13px;
+         border:1px solid grey;
+         margin:5px 3px 10px 3px;
+         cursor:pointer;
+         border-radius: 50%;
+        transition:.3s;
+       
+    
+     }
+    
+     .pagination__logo div:hover {
+        background:rgba(98, 0, 255, 0.315);
+        border: 1px solid white;
+     }
+
+    .one{
+        background-color:rgb(98, 0, 255);
+     }
+    .two{
+        background-color:rgb(98, 0, 255);
+     }
+     .three{
+        background-color:rgb(98, 0, 255);
+     }
+     .none{
+         background:white;
+     }
+      
 </style>
