@@ -45,9 +45,9 @@
 
 
         <article class="counter animate" v-if="isPaginationActive && data.length" >
-            <div class="skip__buttons" v-on:click="skip_back">
+            <!-- <div class="skip__buttons" v-on:click="skip_back">
                 <img src="../../assets/images/skip_previous.svg" alt="flag">
-            </div>
+            </div> -->
             <button class="back" v-on:click="back"> 
                 <img src="../../assets/images/arrow_left.svg" alt="flag">
                  </button>
@@ -60,9 +60,9 @@
                 <img src="../../assets/images/arrow_right.svg" alt="flag">
             </button>
 
-            <div class="skip__buttons" v-on:click="skip_next">
+            <!-- <div class="skip__buttons" v-on:click="skip_next">
                 <img src="../../assets/images/skip_next.svg" alt="flag">
-            </div>
+            </div> -->
 
         </article>
 
@@ -125,16 +125,7 @@ export default {
 
  
     methods: {
-        skip_next(){
-            this.startPage = this.lengthPage
-            this.start=this.lengthPage/6
-        },
-
-
-       skip_back(){
-            this.startPage = 1
-            this.start= 0
-        },
+       
 
 
         activePagination(){
@@ -143,10 +134,11 @@ export default {
             else this.isPaginationActive=false 
         },
 
-        revertLength(){
-            this.startPage = 1
-            this.start= 0
-        },
+        // revertLength(){
+        //     this.startPage = 1
+        //     this.start= 0
+            
+        // },
         search(){
 
             return this.data.filter(item => {
