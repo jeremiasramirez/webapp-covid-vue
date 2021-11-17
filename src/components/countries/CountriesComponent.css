@@ -86,7 +86,7 @@
 
 
 .back{
-    background-color: rgba(189, 88, 102, 0.822);
+    background-color: rgba(241, 235, 236, 0.822);
     width: 80px;
     color:white;
     padding:0px 0;
@@ -122,7 +122,7 @@
     margin: 0 7px;
     box-shadow: 1px 1px 3px grey;
     border:none;
-    background-color: rgba(63, 115, 212, 0.815);
+    background-color: rgba(241, 235, 236, 0.822);
 }
 .next:hover{
     opacity:.9;
