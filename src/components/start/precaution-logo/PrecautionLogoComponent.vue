@@ -8,7 +8,7 @@
       
             <article class="pagination__logo">
                 <div  v-if="saveActive.id == 1"  class="one bounceRight-one" v-on:click="saveActive.id = 1"></div>
-                <div  v-if="saveActive.id != 1" class=" bounceLeft-one"  v-on:click="saveActive.id=1"></div>
+                <div  v-if="saveActive.id != 1" class=" bounceLeft-two"  v-on:click="saveActive.id=1"></div>
 
                 <div class="one bounceRight-one" v-if="saveActive.id == 2"  v-on:click="saveActive.id = 2"></div>
                 <div v-if="saveActive.id != 2"  class=" bounceLeft-one" v-on:click="saveActive.id=2"></div>
@@ -76,6 +76,7 @@ export default {
      .pagination__logo div:hover {
         background:rgba(98, 0, 255, 0.315);
         border: 1px solid white;
+       
      }
 
     .one{

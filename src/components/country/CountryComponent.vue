@@ -4,7 +4,7 @@
                    <!----------- search ------------>
             <article>
                  <article class="container__search" v-if="data.length">
-                <input   v-model="datasearch" type="search" class="search" placeholder="search"> 
+                <input v-on:click="revertLength"  v-model="datasearch" type="search" class="search" placeholder="search"> 
             </article>
 
 
@@ -77,27 +77,26 @@
               <img src="../../assets/images/arrow_right.svg" alt="flag"> 
         </section>
  
-      <section class="visualization">
 
-            <article  class="message bounceIn">
-                <p>Elige un país para ver su información completa! </p>
-            </article>
- 
-            <p v-if="variableGlobal">es global</p>
-        </section>
+    <VisualizationCountryComponent />
+
 </template>
 
 
 <script>
 import "./CountryComponent.css";
 import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
+// import CardCountrycomponent from "../card-country/CardCountry.component.vue";
+import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
 
 export default {
 
     props: ['data'],
     
     components: {
-        FakeCountryComponent
+        FakeCountryComponent,
+        VisualizationCountryComponent
+         
     },
 
 
@@ -144,7 +143,10 @@ export default {
             else this.isPaginationActive=false 
         },
 
- 
+        revertLength(){
+            this.startPage = 1
+            this.start= 0
+        },
         search(){
 
             return this.data.filter(item => {

@@ -6,7 +6,7 @@
     display:flex;
     justify-content: space-between;
    align-items: center;
-   padding: 0 38px;
+   padding: 0 calc(46px + 2px);
   
     
 }
@@ -25,20 +25,6 @@
 
 
 
-.visualization{
-      padding:5px;
-      
-    width:700px;
-    border-radius: 7px;
-    margin:4px;
-    border-radius: 7px;
-    /* margin-right: 50px; */
-    background-color: whitesmoke;
-    height:430px; 
-}
-
-
-
 .message{
     position: relative;
     top:40%;
@@ -46,21 +32,21 @@
 }
 
 .separation{
-    width:70px;
-    height:70px;
-    background-color:rgb(236, 220, 220);
+    width:60px;
+    height:60px;
+    background-color:rgba(238, 225, 225, 0.767);
     border-radius:50%;
     display:flex;
     justify-content: center;
     align-items: center;
-   
     color:rgb(70, 64, 64);
     text-align: center;
     cursor: pointer;
 }
 .separation img{
-    width:35px;
+    width:30px;
     transition: .4s;
+    opacity: .4;
 }
 .separation:hover img{
     transform: scale(1.2);
@@ -95,12 +81,13 @@
     align-content: flex-end;
     align-items: center;
     margin-top:28px;
+    padding: 4px 0;
 }
 
 
 .back{
-    background-color: rgba(184, 90, 90, 0.938);
-    width: 100px;
+    background-color: rgba(189, 88, 102, 0.822);
+    width: 80px;
     color:white;
     padding:0px 0;
     cursor: pointer;
@@ -128,7 +115,7 @@
     padding:0px 0;
     cursor: pointer;
     border-radius: 3px;
-    width: 100px;
+    width: 80px;
     font-weight: 500;
     color:white;
     font-size: 12px;
