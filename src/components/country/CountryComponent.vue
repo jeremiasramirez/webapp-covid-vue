@@ -1,11 +1,11 @@
 <template>
 
     <section class="flex-countries">
-                   <!----------- search ------------>
-            <article>
-                 <article class="container__search" v-if="data.length">
-                <input v-on:click="revertLength"  v-model="datasearch" type="search" class="search" placeholder="search"> 
-            </article>
+        <!--------------- search ---------------->
+        <article>
+            <article class="container__search" v-if="data.length">
+            <input v-on:click="revertLength"  v-model="datasearch" type="search" class="search" placeholder="search"> 
+        </article>
 
 
  
@@ -34,33 +34,19 @@
 
 
 
+    
+  
+    <!--------------- pagination  --------------->
+    <PaginationComponent 
+        :isPaginationActive="isPaginationActive"
+        :data="data"
+        :activePagination="activePagination"
+        :back="back"
+        :startPage="startPage"
+        :lengthPage="lengthPage"
+        :next="next"
+    />
 
-
-      <!--------------counter pagination ----------->
-      <article class="counter animate" v-if="!isPaginationActive && data.length">
-             <div class="activePagination" v-on:click="activePagination">
-                <img src="../../assets/images/compare.svg" alt="flag">
-            </div>
-      </article>
-
-
-        <article class="counter animate" v-if="isPaginationActive && data.length" >
-           
-            <button class="back" v-on:click="back"> 
-                <img src="../../assets/images/arrow_left.svg" alt="flag">
-                 </button>
-                
-                <div class="counting">
-                    {{startPage}} of {{lengthPage}}
-                </div>
-                
-            <button class="next" v-on:click="next"> 
-                <img src="../../assets/images/arrow_right.svg" alt="flag">
-            </button>
-
-          
-
-        </article>
 
         </article>
 
@@ -81,6 +67,7 @@
 
 <script>
 import "./CountryComponent.css";
+import PaginationComponent from "../pagination/PaginationComponent"
 import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
 // import CardCountrycomponent from "../card-country/CardCountry.component.vue";
 import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
@@ -97,7 +84,8 @@ export default {
 
     components: {
         FakeCountryComponent,
-        VisualizationCountryComponent
+        VisualizationCountryComponent,
+        PaginationComponent
          
     },
 
