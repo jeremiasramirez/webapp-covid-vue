@@ -56,13 +56,13 @@
     <VisualizationCountryComponent :data="dataFromVisualization"/>
 
 </template>
-
+ 
 
 <script>
 import "./CountryComponent.css";
-import PaginationComponent from "../pagination/PaginationComponent"
-import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
-import CardCountrycomponent from "../card-country/CardCountry.component.vue";
+import PaginationComponent from "./pagination/PaginationComponent"
+import FakeCountryComponent from "./fake-country/FakeCountryComponent.vue";
+import CardCountrycomponent from "./card-country/CardCountry.component.vue";
 import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
 
 

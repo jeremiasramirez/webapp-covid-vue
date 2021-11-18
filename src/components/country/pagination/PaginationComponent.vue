@@ -3,7 +3,7 @@
       
       <article class="counter animate" v-if="!isPaginationActive && data.length">
              <div class="activePagination" v-on:click="activePagination">
-                <img src="../../assets/images/compare.svg" alt="flag">
+                <img src="../../../assets/images/compare.svg" alt="flag">
             </div>
       </article>
 
@@ -14,7 +14,7 @@
            
            
             <button class="back" v-on:click="back"> 
-                <img src="../../assets/images/arrow_left.svg" alt="flag">
+                <img src="../../../assets/images/arrow_left.svg" alt="flag">
                  </button>
                 
                 <div class="counting">
@@ -22,7 +22,7 @@
                 </div>
                 
             <button class="next" v-on:click="next"> 
-                <img src="../../assets/images/arrow_right.svg" alt="flag">
+                <img src="../../../assets/images/arrow_right.svg" alt="flag">
             </button>
 
           

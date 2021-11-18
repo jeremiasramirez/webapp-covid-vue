@@ -61,7 +61,7 @@
 </template>
 <script>
 import dotTransform from "dot-transform"
-import FakeCardComponent from "../../components/fake-card/FakeCardComponent";
+import FakeCardComponent from "./fake-card/FakeCardComponent";
 import { ajax } from "rxjs/ajax"
 import { pluck, delay } from 'rxjs/operators'
 
