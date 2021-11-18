@@ -10,27 +10,20 @@
 
  
 
-
-         <article class="countrie"  v-if="data.length">
-                
-            <div class="country animate" v-for="(country,index) in search().slice(start,end)" v-bind:key="index" v-on:click="getInfoFromCountry(country,index)">
-                    <div class="flag">
-                      
-                        <img src="../../assets/images/flag.svg" alt="flag">
-                    </div>
-                    <p>{{ country.Country }}</p>
-                      <div class="flag">
-                      
-                        <img src="../../assets/images/arrow.svg" alt="flag">
-                    </div>
-                </div>
-        </article>  
+        <CardCountrycomponent 
+            :data="data"
+            :search="search"
+            :start="start"
+            :end="end"
+            :getInfoFromCountry="getInfoFromCountry"
+        />
+     
 
 
 
 
-        <!------------- fake country ---------->
-        <FakeCountryComponent v-if="!data.length"/>
+    <!------------- fake country ---------->
+    <FakeCountryComponent v-if="!data.length"/>
 
 
 
@@ -69,7 +62,7 @@
 import "./CountryComponent.css";
 import PaginationComponent from "../pagination/PaginationComponent"
 import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
-// import CardCountrycomponent from "../card-country/CardCountry.component.vue";
+import CardCountrycomponent from "../card-country/CardCountry.component.vue";
 import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
 
 
@@ -85,7 +78,8 @@ export default {
     components: {
         FakeCountryComponent,
         VisualizationCountryComponent,
-        PaginationComponent
+        PaginationComponent,
+        CardCountrycomponent
          
     },
 
