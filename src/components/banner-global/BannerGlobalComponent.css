@@ -16,13 +16,13 @@
     justify-content: center;
 }
 .title__global{
-    background-image:linear-gradient(to left, rgb(162, 117, 192),rgb(134, 110, 219));
-    padding:10px 0;
-    border-radius:7px;
+    background-color: rgb(128, 61, 236); 
+    padding:15px 0;
+    border-radius:3px;
     width: 95%;
     text-align: center;
     font-size:16px;
-    margin:-20px 8px 10px 8px;
+    margin:-23px 8px 10px 8px;
     color:white;
 }
 .container__global__cards{
@@ -40,15 +40,17 @@
  
 .card__global{
     width: 200px !important;
-    height:110px;
+    height:103px;
     margin: 4px 5px;
     border-radius: 6px;
-    background-color: rgb(139, 95, 175);
+    /* background-color: rgb(120, 125, 194); */
+    background-color: rgb(128, 61, 236); 
+     border-bottom:3px solid rgb(88, 108, 196);
    
   
 }
 .card__global:hover{
-    transform: translateY(-7px);
+    transform: translateY(-3px);
     cursor: pointer;
 }
 
@@ -97,10 +99,11 @@
     font-size:15px;
     position: absolute;
     bottom:3px;
+    font-weight:600;
     left: 10px;
     text-align: center;
     animation: animateLastUpdate 7s 4s linear;
-    background-image: linear-gradient(to left,rgb(33, 121, 84),rgb(35, 180, 78));
+    background-color: rgb(128, 61, 236); 
 }
 @keyframes animateLastUpdate{
    0%{
