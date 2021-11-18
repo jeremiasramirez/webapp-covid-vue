@@ -5,7 +5,7 @@
                 <p>Elige un país para ver su información completa! </p>
             </article>
  
-            <p v-if="variableGlobal">es global</p>
+            <p v-if="data">{{data.Country}}</p>
         </section>
 </template>
 
@@ -15,6 +15,8 @@
 import "./VisualizationCountryComponent.css";
 
 export default {
-    
+    props:[
+        'data'
+    ]
 }
 </script>

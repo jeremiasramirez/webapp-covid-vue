@@ -29,8 +29,8 @@
 
 
 
-            <!-- --------fake country------ -->
-            <FakeCountryComponent v-if="!data.length"/>
+        <!------------- fake country ---------->
+        <FakeCountryComponent v-if="!data.length"/>
 
 
 
@@ -45,9 +45,7 @@
 
 
         <article class="counter animate" v-if="isPaginationActive && data.length" >
-            <!-- <div class="skip__buttons" v-on:click="skip_back">
-                <img src="../../assets/images/skip_previous.svg" alt="flag">
-            </div> -->
+           
             <button class="back" v-on:click="back"> 
                 <img src="../../assets/images/arrow_left.svg" alt="flag">
                  </button>
@@ -60,9 +58,7 @@
                 <img src="../../assets/images/arrow_right.svg" alt="flag">
             </button>
 
-            <!-- <div class="skip__buttons" v-on:click="skip_next">
-                <img src="../../assets/images/skip_next.svg" alt="flag">
-            </div> -->
+          
 
         </article>
 
@@ -78,7 +74,7 @@
         </section>
  
 
-    <VisualizationCountryComponent />
+    <VisualizationCountryComponent :data="dataFromVisualization"/>
 
 </template>
 
@@ -89,10 +85,16 @@ import FakeCountryComponent from "../fake-country/FakeCountryComponent.vue";
 // import CardCountrycomponent from "../card-country/CardCountry.component.vue";
 import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
 
+
+import {ajax} from 'rxjs/ajax'
+
 export default {
 
     props: ['data'],
     
+
+
+
     components: {
         FakeCountryComponent,
         VisualizationCountryComponent
@@ -105,10 +107,12 @@ export default {
     data(){
         return {
             start:0,
+            dataFromVisualization: null,
             data_: this.data,
             startPage:1,
             lengthPage: 0,
             datasearch:'',
+            imgFromCountry: '',
             end:6,
             isPaginationActive:false
             // flag: "https://restcountries.com/v3.1/name/cuba"
@@ -120,13 +124,16 @@ export default {
   
     mounted(){
         this.search()  
-        
     },
 
  
     methods: {
        
-
+        revertLength(){
+            this.end = 6
+            this.start = 0
+            this.startPage =1
+        },
 
         activePagination(){
             this.lengthPage=Math.round(this.data.length / 6)
@@ -134,11 +141,7 @@ export default {
             else this.isPaginationActive=false 
         },
 
-        // revertLength(){
-        //     this.startPage = 1
-        //     this.start= 0
-            
-        // },
+      
         search(){
 
             return this.data.filter(item => {
@@ -152,7 +155,12 @@ export default {
  
 
         getInfoFromCountry(data,index){
-            console.log(data)
+
+            ajax.get(`https://restcountries.com/v2/name/${data.Country}`).subscribe((img)=>{
+                this.imgFromCountry = img.response[0].flags.svg
+            })
+           
+            this.dataFromVisualization=data;
             console.log(index)
         },
 
