@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "dot-transform": "^1.0.1",
+    "dot-transform": "^2.0.1",
     "rxjs": "^7.4.0",
     "vue": "^3.0.0",
     "vue-material": "^1.0.0-beta-15",

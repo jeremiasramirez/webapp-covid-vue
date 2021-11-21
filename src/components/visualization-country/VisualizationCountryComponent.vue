@@ -7,11 +7,15 @@
 
             <div v-if="data">
                 
-                <article class="title__visual"  >
+                <article class="title__visual">
+                    
                     <img v-if="img" :src="img" alt="logo country">
-                    <i v-if="!img" class="fas fa-circle-notch circle animate circle-builded"></i>
-                    <h1>{{ data.Country }}</h1>
-                    <span class="recording"></span>
+                        
+                        <section v-if="!img" class="container__spinning__loading">
+                            <article class="spinning__loading"></article>
+                        </section>  
+                
+                        <h1>{{ data.Country }}</h1>
                 </article>
 
                 <article class="container__info__visual" v-if="data">

@@ -52,30 +52,31 @@
   background-color:rgb(159, 24, 163);
 }
 
- 
-.recording{
-  position:relative;
-  top:-170px;
-  right:-330px;
-  width:15px;
   
-  height:15px;
-  border-radius:50%;
-  display: inline-block;
-  background-color: rgb(192, 71, 71);
-  border: 2px solid white;
-  animation: record 1s infinite linear alternate-reverse;
+/* spinning */
+.container__spinning__loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:34px;
+  
+}    
+.spinning__loading{
+  width: 30px;
+  
+  margin-bottom:55px;
+  height: 30px;
+  border-radius: 50%;
+  border-left:3px solid rgb(238, 94, 94); 
+  animation: scaleOnScale .4s infinite linear;
 }
 
-@keyframes record {
+
+@keyframes scaleOnScale {
   from{
-    opacity:.2;
+      transform: rotate(-360deg);
   }
   to{
-    opacity:1;
+      transform: rotate(0);
   }
-}
-
-.circle-builded{
-  margin-bottom:45px;
 }
