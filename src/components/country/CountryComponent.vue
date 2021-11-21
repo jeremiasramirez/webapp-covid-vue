@@ -137,7 +137,8 @@ export default {
  
 
         getInfoFromCountry(data){
-
+            this.imgFromCountry = null;
+             this.dataFromVisualization=null;
             ajax.get(`https://restcountries.com/v2/name/${data.Country}`).subscribe((img)=>{
                 this.imgFromCountry = img.response[0].flags.svg
             })
