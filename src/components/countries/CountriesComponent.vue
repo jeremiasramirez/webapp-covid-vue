@@ -28,21 +28,14 @@ import CountryComponent from "../country/CountryComponent.vue";
 
 
 export default {
-    data(){
-        return { }
-    },
+    
     props: [
         'allCountries'
     ],
     
     components: {
         CountryComponent
-    },
-    method:{
-        
-        
-    }
-    
+    } 
 
 
 

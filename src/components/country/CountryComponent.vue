@@ -53,7 +53,7 @@
         </section>
  
 
-    <VisualizationCountryComponent :data="dataFromVisualization"/>
+    <VisualizationCountryComponent :img="imgFromCountry" :data="dataFromVisualization"/>
 
 </template>
  
@@ -136,14 +136,14 @@ export default {
 
  
 
-        getInfoFromCountry(data,index){
+        getInfoFromCountry(data){
 
             ajax.get(`https://restcountries.com/v2/name/${data.Country}`).subscribe((img)=>{
                 this.imgFromCountry = img.response[0].flags.svg
             })
            
             this.dataFromVisualization=data;
-            console.log(index)
+             
         },
 
 
