@@ -39,13 +39,16 @@
     transition: 1s;
     transform-origin: center;
     color: rgb(123, 123, 241);
+    transform-origin: center;
 }
 @keyframes bounceIdentifier {
     from{
+        transform-origin: center;
         transform: rotate(0);
      
     }
     to{
+        transform-origin: center;
         transform: rotate(360deg);
          
     }
