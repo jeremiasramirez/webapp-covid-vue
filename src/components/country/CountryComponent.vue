@@ -53,7 +53,7 @@
         </section>
  
 
-    <VisualizationCountryComponent :img="imgFromCountry" :data="dataFromVisualization"/>
+    <VisualizationCountryComponent :img="imgFromCountry" :data="dataFromVisualization" :dataFromCountry="dataFromCountry"/>
 
 </template>
  
@@ -64,7 +64,7 @@ import PaginationComponent from "./pagination/PaginationComponent"
 import FakeCountryComponent from "./fake-country/FakeCountryComponent.vue";
 import CardCountrycomponent from "./card-country/CardCountry.component.vue";
 import VisualizationCountryComponent from "../visualization-country/VisualizationCountryComponent"
-
+// import dotTransform from 'dot-transform'
 
 import {ajax} from 'rxjs/ajax'
 
@@ -89,6 +89,7 @@ export default {
     data(){
         return {
             start:0,
+            dataFromCountry: null,
             dataFromVisualization: null,
             data_: this.data,
             startPage:1,
@@ -138,12 +139,18 @@ export default {
 
         getInfoFromCountry(data){
             this.imgFromCountry = null;
-             this.dataFromVisualization=null;
+            this.dataFromVisualization=null;
+            this.dataFromCountry = null;
+
+
             ajax.get(`https://restcountries.com/v2/name/${data.Country}`).subscribe((img)=>{
-                this.imgFromCountry = img.response[0].flags.svg
+                this.imgFromCountry = img.response[0].flags.svg;
+                this.dataFromCountry = img.response;
             })
            
+          
             this.dataFromVisualization=data;
+           
              
         },
 

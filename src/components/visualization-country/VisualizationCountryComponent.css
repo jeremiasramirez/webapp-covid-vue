@@ -40,10 +40,31 @@
   width: 50%;
   height: 100%;
   margin:3px;
-    border-radius:7px;
-  background-color:rgb(0, 255, 115);
+  border-radius:7px;
+  background-color:rgb(238, 231, 231);
 }
 
+.item{
+  padding:0 10px;
+  display:flex;
+  background-color: rgb(240, 232, 232);
+  margin: 2px 0;
+  border-bottom:1px solid #ddd;
+  height:45px;
+  justify-items: center;
+  justify-content: space-between;
+}
+.item__value{
+  background-color:rgb(219, 210, 210);
+  padding:3px;
+  font-size:14px;
+  font-weight: 500;
+  height:18px;
+  border-radius: 6px;
+}
+.item__title{
+  font-size:15px;
+}
 .column-2{
   width: 50%;
   height: 100%;
@@ -79,4 +100,9 @@
   to{
       transform: rotate(0);
   }
+}
+
+.item__value__red{
+  background-color: rgb(218, 79, 79) !important; 
+  color: white !important
 }
