@@ -44,14 +44,45 @@
                         </div>
 
                           <div class="item">
-                            <p class="item__title animate"> Casos confirmados en total</p>
+                            <p class="item__title animate"> Casos  en total</p>
                             <p class="item__value animate"> {{ dotTransform(data.TotalConfirmed) }} </p>
                         </div>
                     </div>
 
 
                     <div class="column-2">
-                        {{ dataFromCountry }}
+                        
+                        <div class="column__first animate">
+
+                            <div class="item__column__first">
+                                <p class="item__title__first animate"> Población </p>
+                                <p class="item__value__first animate "> {{ dotTransform(dataFromCountry[0].population) }} </p>
+                            </div>
+
+
+                            <div class="item__column__first">
+                                <p class="item__title__first animate"> Capital </p>
+                                <p class="item__value__first animate "> {{  dataFromCountry[0].capital}} </p>
+                            </div>
+
+                              <div class="item__column__first">
+                                <p class="item__title__first animate"> Prefijo numérico </p>
+                                <p class="item__value__first animate "> +({{  dataFromCountry[0].callingCodes[0] }}) </p>
+                            </div>
+
+                             <div class="item__column__first">
+                                <p class="item__title__first animate"> Region </p>
+                                <p class="item__value__first animate "> {{  dataFromCountry[0].region}} </p>
+                            </div>
+
+                            <div class="item__column__first">
+                                <p class="item__title__first animate"> Moneda </p>
+                                <p class="item__value__first animate "> {{  dataFromCountry[0].currencies[0].code }}, {{  dataFromCountry[0].currencies[0].symbol }} </p>
+                            </div>
+                        </div>
+
+                       
+
                     </div>
                 </article>
 
@@ -75,7 +106,9 @@ export default {
         'img',
         'dataFromCountry'
     ],
-  
+    mounted(){
+        console.log(this.dataFromCountry)
+    },
     methods: {
         dotTransform(data) {
             var lastData = String(data);
