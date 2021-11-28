@@ -1,3 +1,3 @@
-# statistic-vue
+# app-covid-manager-vuejs
 
  
